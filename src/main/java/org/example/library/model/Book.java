@@ -1,4 +1,4 @@
-package org.example;
+package org.example.library.model;
 
 public class Book {
     // Pola

@@ -1,0 +1,322 @@
+Index: .idea/misc.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<project version=\"4\">\n  <component name=\"ExternalStorageConfigurationManager\" enabled=\"true\" />\n  <component name=\"MavenProjectsManager\">\n    <option name=\"originalFiles\">\n      <list>\n        <option value=\"$PROJECT_DIR$/pom.xml\" />\n      </list>\n    </option>\n  </component>\n  <component name=\"ProjectRootManager\" version=\"2\" languageLevel=\"JDK_18\" default=\"true\" project-jdk-name=\"openjdk-18\" project-jdk-type=\"JavaSDK\">\n    <output url=\"file://$PROJECT_DIR$/out\" />\n  </component>\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/misc.xml b/.idea/misc.xml
+--- a/.idea/misc.xml	(revision 05f9523089758cc6a35cc67f8a6f1d46366be4ef)
++++ b/.idea/misc.xml	(date 1671126276568)
+@@ -11,4 +11,7 @@
+   <component name="ProjectRootManager" version="2" languageLevel="JDK_18" default="true" project-jdk-name="openjdk-18" project-jdk-type="JavaSDK">
+     <output url="file://$PROJECT_DIR$/out" />
+   </component>
++  <component name="ProjectType">
++    <option name="id" value="jpab" />
++  </component>
+ </project>
+\ No newline at end of file
+Index: src/main/java/org/example/library/model/Book.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package org.example;\n\npublic class Book {\n    // Pola\n    private String title;\n    private String author;\n    private int releaseDate;\n    private int pages;\n    private String publisher;\n    private String isbn;\n\n    // Konstruktory\n    public Book(String title, String author, int releaseDate,\n                int pages, String publisher, String isbn) {\n        this(title, author, releaseDate, pages, publisher);\n        this.isbn = isbn;\n    }\n\n    public Book(String title, String author, int releaseDate, int pages, String publisher) {\n        this.title = title;\n        this.author = author;\n        this.releaseDate = releaseDate;\n        this.pages = pages;\n        this.publisher = publisher;\n    }\n\n    // settery i gettery\n    public String getTitle() {\n        return title;\n    }\n\n    public void setTitle(String title) {\n        this.title = title;\n    }\n\n    public String getIsbn() {\n        return isbn;\n    }\n\n    public void setIsbn(String isbn) {\n        this.isbn = isbn;\n    }\n\n    public String getPublisher() {\n        return publisher;\n    }\n\n    public void setPublisher(String publisher) {\n        this.publisher = publisher;\n    }\n\n    public int getPages() {\n        return pages;\n    }\n\n    public void setPages(int pages) {\n        this.pages = pages;\n    }\n\n    public int getReleaseDate() {\n        return releaseDate;\n    }\n\n    public void setReleaseDate(int releaseDate) {\n        this.releaseDate = releaseDate;\n    }\n\n    public String getAuthor() {\n        return author;\n    }\n\n    public void setAuthor(String author) {\n        this.author = author;\n    }\n\n    public void printInfo() {\n        String info = title + \"; \" + author + \"; \" + releaseDate + \"; \"\n                + pages + \"; \" + publisher;\n        if (isbn != null) {\n            info = info + \"; \" + isbn;\n        }\n        System.out.println(info);\n    }\n}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/org/example/library/model/Book.java b/src/main/java/org/example/library/model/Book.java
+--- a/src/main/java/org/example/library/model/Book.java	(revision 05f9523089758cc6a35cc67f8a6f1d46366be4ef)
++++ b/src/main/java/org/example/library/model/Book.java	(date 1671274676674)
+@@ -1,4 +1,4 @@
+-package org.example;
++package org.example.library.model;
+ 
+ public class Book {
+     // Pola
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<project version=\"4\">\n  <component name=\"AutoImportSettings\">\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\n  </component>\n  <component name=\"ChangeListManager\">\n    <list default=\"true\" id=\"ad5febc2-6b16-4f56-a591-5b6cc586ca92\" name=\"Changes\" comment=\"\" />\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\n  </component>\n  <component name=\"ProjectId\" id=\"2HpX0vr4d09f15UPKGhqId75cXR\" />\n  <component name=\"ProjectLevelVcsManager\" settingsEditedManually=\"true\" />\n  <component name=\"ProjectViewState\">\n    <option name=\"showLibraryContents\" value=\"true\" />\n  </component>\n  <component name=\"PropertiesComponent\"><![CDATA[{\n  \"keyToString\": {\n    \"RunOnceActivity.OpenProjectViewOnStart\": \"true\",\n    \"RunOnceActivity.ShowReadmeOnStart\": \"true\",\n    \"WebServerToolWindowFactoryState\": \"false\"\n  }\n}]]></component>\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\n  <component name=\"TaskManager\">\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\n      <changelist id=\"ad5febc2-6b16-4f56-a591-5b6cc586ca92\" name=\"Changes\" comment=\"\" />\n      <created>1668982779965</created>\n      <option name=\"number\" value=\"Default\" />\n      <option name=\"presentableId\" value=\"Default\" />\n      <updated>1668982779965</updated>\n    </task>\n    <servers />\n  </component>\n  <component name=\"Vcs.Log.Tabs.Properties\">\n    <option name=\"TAB_STATES\">\n      <map>\n        <entry key=\"MAIN\">\n          <value>\n            <State />\n          </value>\n        </entry>\n      </map>\n    </option>\n  </component>\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision 05f9523089758cc6a35cc67f8a6f1d46366be4ef)
++++ b/.idea/workspace.xml	(date 1671285807787)
+@@ -4,14 +4,35 @@
+     <option name="autoReloadType" value="SELECTIVE" />
+   </component>
+   <component name="ChangeListManager">
+-    <list default="true" id="ad5febc2-6b16-4f56-a591-5b6cc586ca92" name="Changes" comment="" />
++    <list default="true" id="ad5febc2-6b16-4f56-a591-5b6cc586ca92" name="Changes" comment="">
++      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/library/app/LibraryApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/library/app/LibraryApp.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/library/app/LibraryControl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/library/app/LibraryControl.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/library/io/DataReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/library/io/DataReader.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/library/model/Book.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/library/model/Book.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/library/model/Library.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/library/model/Library.java" afterDir="false" />
++    </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+     <option name="LAST_RESOLUTION" value="IGNORE" />
++  </component>
++  <component name="FileTemplateManagerImpl">
++    <option name="RECENT_TEMPLATES">
++      <list>
++        <option value="Class" />
++      </list>
++    </option>
++  </component>
++  <component name="Git.Settings">
++    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+   </component>
+   <component name="ProjectId" id="2HpX0vr4d09f15UPKGhqId75cXR" />
+-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
++  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
++    <ConfirmationsSetting value="2" id="Add" />
++  </component>
+   <component name="ProjectViewState">
+     <option name="showLibraryContents" value="true" />
+   </component>
+@@ -19,7 +40,14 @@
+   "keyToString": {
+     "RunOnceActivity.OpenProjectViewOnStart": "true",
+     "RunOnceActivity.ShowReadmeOnStart": "true",
+-    "WebServerToolWindowFactoryState": "false"
++    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
++    "WebServerToolWindowFactoryState": "false",
++    "node.js.detected.package.eslint": "true",
++    "node.js.detected.package.tslint": "true",
++    "node.js.selected.package.eslint": "(autodetect)",
++    "node.js.selected.package.tslint": "(autodetect)",
++    "nodejs_package_manager_path": "npm",
++    "vue.rearranger.settings.migration": "true"
+   }
+ }]]></component>
+   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+@@ -30,8 +58,12 @@
+       <option name="number" value="Default" />
+       <option name="presentableId" value="Default" />
+       <updated>1668982779965</updated>
++      <workItem from="1671126190308" duration="7344000" />
+     </task>
+     <servers />
++  </component>
++  <component name="TypeScriptGeneratedFilesManager">
++    <option name="version" value="3" />
+   </component>
+   <component name="Vcs.Log.Tabs.Properties">
+     <option name="TAB_STATES">
+Index: src/main/java/org/example/library/io/DataReader.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package org.example.library.io;public class DataReader {\n}\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/org/example/library/io/DataReader.java b/src/main/java/org/example/library/io/DataReader.java
+--- a/src/main/java/org/example/library/io/DataReader.java	(revision 05f9523089758cc6a35cc67f8a6f1d46366be4ef)
++++ b/src/main/java/org/example/library/io/DataReader.java	(date 1671284738920)
+@@ -1,2 +1,36 @@
+-package org.example.library.io;public class DataReader {
++package org.example.library.io;
++
++import org.example.library.model.Book;
++
++import java.util.Scanner;
++
++public class DataReader {
++    private Scanner sc = new Scanner(System.in);
++
++    public void close() {
++        sc.close();
++    }
++
++    public int getInt() {
++        int number = sc.nextInt();
++        sc.nextLine();
++        return number;
++    }
++
++    public Book readAndCreateBook() {
++        System.out.println("Tytuł: ");
++        String title = sc.nextLine();
++        System.out.println("Autor: ");
++        String author = sc.nextLine();
++        System.out.println("Wydawnictwo: ");
++        String publisher = sc.nextLine();
++        System.out.println("ISBN: ");
++        String isbn = sc.nextLine();
++        System.out.println("Rok wydania: ");
++        int releaseDate = getInt();
++        System.out.println("Ilość stron: ");
++        int pages = getInt();
++
++        return new Book(title, author, releaseDate, pages, publisher, isbn);
++    }
+ }
+Index: pom.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<project xmlns=\"http://maven.apache.org/POM/4.0.0\"\n         xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"\n         xsi:schemaLocation=\"http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd\">\n    <modelVersion>4.0.0</modelVersion>\n\n    <groupId>org.example</groupId>\n    <artifactId>library</artifactId>\n    <version>1.0-SNAPSHOT</version>\n\n    <properties>\n        <maven.compiler.source>18</maven.compiler.source>\n        <maven.compiler.target>18</maven.compiler.target>\n        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>\n    </properties>\n    \n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/pom.xml b/pom.xml
+--- a/pom.xml	(revision 05f9523089758cc6a35cc67f8a6f1d46366be4ef)
++++ b/pom.xml	(date 1668982781786)
+@@ -13,5 +13,5 @@
+         <maven.compiler.target>18</maven.compiler.target>
+         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+     </properties>
+-    
++
+ </project>
+\ No newline at end of file
+Index: src/main/java/org/example/library/app/LibraryControl.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package org.example.library.app;public class LibraryControl {\n}\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/org/example/library/app/LibraryControl.java b/src/main/java/org/example/library/app/LibraryControl.java
+--- a/src/main/java/org/example/library/app/LibraryControl.java	(revision 05f9523089758cc6a35cc67f8a6f1d46366be4ef)
++++ b/src/main/java/org/example/library/app/LibraryControl.java	(date 1671284756382)
+@@ -1,2 +1,65 @@
+-package org.example.library.app;public class LibraryControl {
+-}
++package org.example.library.app;
++
++import org.example.library.io.DataReader;
++import org.example.library.model.Book;
++import org.example.library.model.Library;
++
++public class LibraryControl {
++    // zmienne do kontrolowania programu
++    private final int exit = 0;
++    private final int addBook = 1;
++    private final int printBooks = 2;
++
++    // zmienna do komunikacji z użytkownikiem
++    private DataReader dataReader = new DataReader();
++
++    // "biblioteka" przechowująca dane
++    private Library library = new Library();
++
++    /*
++     * Główna metoda programu, która pozwala na wybór opcji i interakcję
++     */
++    public void controlLoop() {
++        int option;
++
++        do {
++            printOptions();
++            option = dataReader.getInt();
++            switch (option) {
++                case addBook:
++                    addBook();
++                    break;
++                case printBooks:
++                    printBooks();
++                    break;
++                case exit:
++                    exit();
++                    break;
++                default:
++                    System.out.println("Nie ma takiej opcji, wprowadź ponownie: ");
++            }
++        } while(option != exit);
++    }
++
++    private void printOptions() {
++        System.out.println("Wybierz opcję: ");
++        System.out.println(exit + " - wyjście z programu");
++        System.out.println(addBook + " - dodanie nowej książki");
++        System.out.println(printBooks + " - wyświetl dostępne książki");
++    }
++
++    private void addBook() {
++        Book book = dataReader.readAndCreateBook();
++        library.addBook(book);
++    }
++
++    private void printBooks() {
++        library.printBooks();
++    }
++
++    private void exit() {
++        System.out.println("Koniec programu, papa!");
++        // zamykamy strumień wejścia
++        dataReader.close();
++    }
++}
+\ No newline at end of file
+Index: src/main/java/org/example/library/model/Library.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package org.example.library.model;public class Library {\n}\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/org/example/library/model/Library.java b/src/main/java/org/example/library/model/Library.java
+--- a/src/main/java/org/example/library/model/Library.java	(revision 05f9523089758cc6a35cc67f8a6f1d46366be4ef)
++++ b/src/main/java/org/example/library/model/Library.java	(date 1671284731900)
+@@ -1,2 +1,27 @@
+-package org.example.library.model;public class Library {
+-}
++package org.example.library.model;
++
++public class Library {
++
++    private final int maxBooks= 1000;
++    private Book[] books = new Book[maxBooks];
++    private int booksNumber;
++
++    public void addBook(Book book) {
++        if(booksNumber < maxBooks) {
++            books[booksNumber] = book;
++            booksNumber++;
++        } else {
++            System.out.println("Maksymalna liczba książek została osiągnięta");
++        }
++
++    }
++
++    public void printBooks() {
++        if(booksNumber == 0) {
++            System.out.println("Brak książek w bibliotece");
++        }
++        for(int i=0; i<booksNumber; i++) {
++            books[i].printInfo();
++        }
++    }
++}
+\ No newline at end of file
+Index: src/main/java/org/example/library/app/LibraryApp.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package org.example.library.app;public class LibraryApp {\n}\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/org/example/library/app/LibraryApp.java b/src/main/java/org/example/library/app/LibraryApp.java
+--- a/src/main/java/org/example/library/app/LibraryApp.java	(revision 05f9523089758cc6a35cc67f8a6f1d46366be4ef)
++++ b/src/main/java/org/example/library/app/LibraryApp.java	(date 1671284769342)
+@@ -1,2 +1,10 @@
+-package org.example.library.app;public class LibraryApp {
+-}
++package org.example.library.app;
++
++public class LibraryApp {
++    public static void main(String[] args) {
++        final String appName = "Biblioteka v0.9";
++        System.out.println(appName);
++        LibraryControl libControl = new LibraryControl();
++        libControl.controlLoop();
++    }
++}
+\ No newline at end of file
