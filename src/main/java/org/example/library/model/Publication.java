@@ -2,7 +2,7 @@ package org.example.library.model;
 
 import java.util.Objects;
 
-public class Publication {
+public abstract class Publication {
     private String title;
     private String publisher;
     private int year;
