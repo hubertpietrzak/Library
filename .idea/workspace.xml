@@ -5,14 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ad5febc2-6b16-4f56-a591-5b6cc586ca92" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/library/exception/InvalidDataException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/library/io/file/CsvFileManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/library/exception/DataExportException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/library/exception/DataExportException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/library/exception/DataImportException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/library/exception/DataImportException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/library/io/DataReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/library/io/DataReader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/library/io/file/FileManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/library/io/file/FileManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/library/io/file/FileManagerBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/library/io/file/FileManagerBuilder.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/library/io/file/FileType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/library/io/file/FileType.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/library/io/file/SerializableFileManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/library/io/file/SerializableFileManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/library/model/Book.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/library/model/Book.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/library/model/Library.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/library/model/Library.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/library/model/Magazine.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/library/model/Magazine.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/library/model/Publication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/library/model/Publication.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -65,7 +64,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1668982779965</updated>
-      <workItem from="1672828858508" duration="6567000" />
+      <workItem from="1672828858508" duration="9206000" />
     </task>
     <servers />
   </component>
