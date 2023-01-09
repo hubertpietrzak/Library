@@ -3,7 +3,7 @@ package org.example.library.model;
 import java.io.Serializable;
 import java.util.Objects;
 
-public abstract class Publication implements Serializable, Comparable<Publication> {
+public abstract class Publication implements Serializable, Comparable<Publication>, CsvConvertible {
     private String title;
     private String publisher;
     private int year;
@@ -13,16 +13,12 @@ public abstract class Publication implements Serializable, Comparable<Publicatio
         this.publisher = publisher;
         this.year = year;
     }
-    @Override
-    public int compareTo(Publication p) {
-        return title.compareToIgnoreCase(p.title);
-    }
 
     public int getYear() {
         return year;
     }
 
-    void setYear(int year) {
+    public void setYear(int year) {
         this.year = year;
     }
 
@@ -30,15 +26,15 @@ public abstract class Publication implements Serializable, Comparable<Publicatio
         return title;
     }
 
-    void setTitle(String title) {
+    public void setTitle(String title) {
         this.title = title;
     }
 
-    String getPublisher() {
+    public String getPublisher() {
         return publisher;
     }
 
-    void setPublisher(String publisher) {
+    public void setPublisher(String publisher) {
         this.publisher = publisher;
     }
 
@@ -46,8 +42,6 @@ public abstract class Publication implements Serializable, Comparable<Publicatio
     public String toString() {
         return title + ", " + publisher + ", " + year;
     }
-
-    public abstract String toCsv();
 
     @Override
     public boolean equals(Object o) {
@@ -62,5 +56,10 @@ public abstract class Publication implements Serializable, Comparable<Publicatio
     @Override
     public int hashCode() {
         return Objects.hash(title, publisher, year);
+    }
+
+    @Override
+    public int compareTo(Publication p) {
+        return title.compareToIgnoreCase(p.title);
     }
 }

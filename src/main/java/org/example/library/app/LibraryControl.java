@@ -1,17 +1,11 @@
 package org.example.library.app;
 
-import org.example.library.exception.DataExportException;
-import org.example.library.exception.DataImportException;
-import org.example.library.exception.InvalidDataException;
-import org.example.library.exception.NoSuchOptionException;
+import org.example.library.exception.*;
 import org.example.library.io.ConsolePrinter;
 import org.example.library.io.DataReader;
 import org.example.library.io.file.FileManager;
 import org.example.library.io.file.FileManagerBuilder;
-import org.example.library.model.Book;
-import org.example.library.model.Library;
-import org.example.library.model.Magazine;
-import org.example.library.model.Publication;
+import org.example.library.model.*;
 import org.example.library.model.comparator.AlphabeticalTitleComparator;
 
 import java.util.Arrays;
@@ -61,6 +55,12 @@ class LibraryControl {
                 case DELETE_MAGAZINE:
                     deleteMagazine();
                     break;
+                case ADD_USER: //dodano
+                    addUser();
+                    break;
+                case PRINT_USERS: //dodano
+                    printUsers();
+                    break;
                 case EXIT:
                     exit();
                     break;
@@ -105,11 +105,6 @@ class LibraryControl {
         }
     }
 
-    private void printBooks() {
-        Publication[] publications = getSortedPublications();
-        printer.printBooks(publications);
-    }
-
     private void addMagazine() {
         try {
             Magazine magazine = dataReader.readAndCreateMagazine();
@@ -121,15 +116,26 @@ class LibraryControl {
         }
     }
 
-    private void printMagazines() {
-        Publication[] publications = getSortedPublications();
-        printer.printMagazines(publications);
+    //dodano
+    private void addUser() {
+        LibraryUser libraryUser = dataReader.createLibraryUser();
+        try {
+            library.addUser(libraryUser);
+        } catch (UserAlreadyExistsException e) {
+            printer.printLine(e.getMessage());
+        }
     }
 
-    private Publication[] getSortedPublications() {
-        Publication[] publications = library.getPublications();
-        Arrays.sort(publications, new AlphabeticalTitleComparator());
-        return publications;
+    private void printBooks() {
+        printer.printBooks(library.getPublications().values());
+    }
+
+    private void printMagazines() {
+        printer.printMagazines(library.getPublications().values());
+    }
+
+    private void printUsers() {
+        printer.printUsers(library.getUsers().values());
     }
 
     private void deleteMagazine() {
@@ -170,11 +176,13 @@ class LibraryControl {
     private enum Option {
         EXIT(0, "Wyjście z programu"),
         ADD_BOOK(1, "Dodanie książki"),
-        ADD_MAGAZINE(2,"Dodanie magazynu/gazety"),
+        ADD_MAGAZINE(2, "Dodanie magazynu/gazety"),
         PRINT_BOOKS(3, "Wyświetlenie dostępnych książek"),
         PRINT_MAGAZINES(4, "Wyświetlenie dostępnych magazynów/gazet"),
         DELETE_BOOK(5, "Usuń książkę"),
-        DELETE_MAGAZINE(6, "Usuń magazyn");
+        DELETE_MAGAZINE(6, "Usuń magazyn"),
+        ADD_USER(7, "Dodaj czytelnika"), //dodano
+        PRINT_USERS(8, "Wyświetl czytelników"); //dodano
 
         private int value;
         private String description;
@@ -192,7 +200,7 @@ class LibraryControl {
         static Option createFromInt(int option) throws NoSuchOptionException {
             try {
                 return Option.values()[option];
-            } catch(ArrayIndexOutOfBoundsException e) {
+            } catch (ArrayIndexOutOfBoundsException e) {
                 throw new NoSuchOptionException("Brak opcji o id " + option);
             }
         }
