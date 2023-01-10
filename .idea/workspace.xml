@@ -4,21 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ad5febc2-6b16-4f56-a591-5b6cc586ca92" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Library_users.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/library/exception/PublicationAlreadyExistsException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/library/exception/UserAlreadyExistsException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/library/model/CsvConvertible.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/library/model/LibraryUser.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/library/model/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/library/app/LibraryControl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/library/app/LibraryControl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/library/io/ConsolePrinter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/library/io/ConsolePrinter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/library/io/DataReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/library/io/DataReader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/library/io/file/CsvFileManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/library/io/file/CsvFileManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/library/model/Library.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/library/model/Library.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/library/model/Publication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/library/model/Publication.java" afterDir="false" />
-    </list>
+    <list default="true" id="ad5febc2-6b16-4f56-a591-5b6cc586ca92" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -60,8 +46,8 @@
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
     "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -98,7 +84,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1668982779965</updated>
-      <workItem from="1672828858508" duration="14824000" />
+      <workItem from="1672828858508" duration="15700000" />
     </task>
     <servers />
   </component>
